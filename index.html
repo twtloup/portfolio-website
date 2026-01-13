@@ -28,6 +28,7 @@
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -74,10 +75,10 @@
             </div>
             <div class="about-content fade-in">
                 <p class="about-text">
-                    Technology Consultant at EY with 18 months of experience delivering Business Intelligence solutions and data analytics that drive measurable business outcomes. My work in A/B testing optimization has contributed to £1M-£3M in revenue impact, demonstrating the power of data-driven decision making.
+                    Technology Consultant at EY with 18 months of experience delivering Business Intelligence solutions and data analytics that drive measurable business outcomes. I am a highly driven and analytical professional with a background in transformation consulting and strategic implementation. I am capable of translating complex technical requirements into commercial value. I have experience in leading software implementations and partnering with C-suite stakeholders to deliver high-impact results.
                 </p>
                 <p class="about-text">
-                    I'm passionate about the intersection of data and product strategy, helping organizations make informed decisions through comprehensive analytics and stakeholder collaboration. Currently seeking product analyst and strategy roles at venture-funded fintech and SaaS companies where I can leverage data to shape product direction and business growth.
+                    I'm passionate about the intersection of data and product strategy, helping organizations make informed decisions through comprehensive analytics and stakeholder collaboration. Currently seeking product analyst and strategy roles where I can leverage data to shape product direction and business growth.
                 </p>
                 <div class="skills">
                     <span class="skill-badge">SQL</span>
@@ -219,7 +220,7 @@
                     </div>
 
                     <div class="project-footer">
-                        <a href="https://github.com/twtloup/financial_trading_project" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <a href="https://github.com/twtloup/trading-algo-example" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                             View Code
                             <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -232,6 +233,87 @@
             </div>
         </div>
     </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="cv-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Curriculum Vitae</h2>
+                <p class="section-description">
+                    My professional experience and qualifications
+                </p>
+            </div>
+            <div class="cv-content fade-in">
+                <div class="cv-preview-container">
+                    <div class="cv-preview" id="cvPreview">
+                        <iframe
+                            src="tom-loup-cv.pdf"
+                            title="Tom Loup CV Preview"
+                            class="cv-iframe"
+                        ></iframe>
+                        <div class="cv-overlay" id="cvOverlay">
+                            <button class="btn-expand" id="expandBtn" aria-label="Enlarge CV preview">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path>
+                                </svg>
+                                Click to enlarge
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cv-actions">
+                        <a href="tom-loup-cv.pdf" download="Tom-Loup-CV.pdf" class="btn btn-primary">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download CV
+                        </a>
+                        <a href="tom-loup-cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Open in New Tab
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Modal (for enlarged view) -->
+    <div id="cvModal" class="cv-modal">
+        <div class="cv-modal-content">
+            <div class="cv-modal-header">
+                <h3>Curriculum Vitae</h3>
+                <button class="cv-modal-close" id="closeModal" aria-label="Close modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="cv-modal-body">
+                <iframe
+                    src="tom-loup-cv.pdf"
+                    title="Tom Loup CV Full View"
+                    class="cv-modal-iframe"
+                ></iframe>
+            </div>
+            <div class="cv-modal-footer">
+                <a href="tom-loup-cv.pdf" download="Tom-Loup-CV.pdf" class="btn btn-primary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

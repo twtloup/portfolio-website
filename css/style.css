@@ -481,6 +481,205 @@ section {
 }
 
 /* ===========================
+   CV Section
+   =========================== */
+
+.cv-section {
+    background-color: var(--color-background-alt);
+}
+
+.cv-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cv-preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.cv-preview {
+    position: relative;
+    width: 100%;
+    background: var(--color-card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cv-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+}
+
+.cv-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    cursor: pointer;
+}
+
+.cv-preview:hover .cv-overlay {
+    opacity: 1;
+}
+
+.btn-expand {
+    background: white;
+    color: var(--color-primary);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--border-radius-sm);
+    border: none;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-expand:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-expand .icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+.cv-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CV Modal */
+.cv-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.95);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    animation: fadeIn var(--transition-base);
+}
+
+.cv-modal.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cv-modal-content {
+    background: var(--color-background);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 1200px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp var(--transition-base);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cv-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cv-modal-header h3 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+}
+
+.cv-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.cv-modal-close:hover {
+    background: var(--color-background-alt);
+}
+
+.cv-modal-close svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-text-secondary);
+    stroke-width: 2;
+}
+
+.cv-modal-body {
+    flex: 1;
+    overflow: hidden;
+    padding: var(--spacing-lg);
+}
+
+.cv-modal-iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border: none;
+    border-radius: var(--border-radius-sm);
+}
+
+.cv-modal-footer {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+}
+
+/* ===========================
    Contact Section
    =========================== */
 
@@ -609,6 +808,22 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .cv-iframe {
+        height: 400px;
+    }
+
+    .cv-actions {
+        flex-direction: column;
+    }
+
+    .cv-actions .btn {
+        width: 100%;
+    }
+
+    .cv-modal-content {
+        max-height: 95vh;
+    }
+
     section {
         padding: var(--spacing-2xl) 0;
     }
@@ -631,6 +846,18 @@ section {
 
     .project-card {
         padding: var(--spacing-lg);
+    }
+
+    .cv-iframe {
+        height: 300px;
+    }
+
+    .cv-modal-body {
+        padding: var(--spacing-sm);
+    }
+
+    .cv-modal-iframe {
+        min-height: 400px;
     }
 }
 

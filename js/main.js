@@ -196,6 +196,67 @@ function debounce(func, wait = 10) {
 // This is a helper function for future optimizations
 
 // ===========================
+// CV Modal Functionality
+// ===========================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cvModal = document.getElementById('cvModal');
+    const expandBtn = document.getElementById('expandBtn');
+    const cvOverlay = document.getElementById('cvOverlay');
+    const cvPreview = document.getElementById('cvPreview');
+    const closeModal = document.getElementById('closeModal');
+
+    // Open modal when clicking the preview or expand button
+    const openModal = () => {
+        if (cvModal) {
+            cvModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    };
+
+    // Close modal
+    const closeModalHandler = () => {
+        if (cvModal) {
+            cvModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    };
+
+    // Event listeners
+    if (expandBtn) {
+        expandBtn.addEventListener('click', openModal);
+    }
+
+    if (cvOverlay) {
+        cvOverlay.addEventListener('click', openModal);
+    }
+
+    if (cvPreview) {
+        cvPreview.addEventListener('click', openModal);
+    }
+
+    if (closeModal) {
+        closeModal.addEventListener('click', closeModalHandler);
+    }
+
+    // Close modal when clicking outside the content
+    if (cvModal) {
+        cvModal.addEventListener('click', (e) => {
+            if (e.target === cvModal) {
+                closeModalHandler();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && cvModal && cvModal.classList.contains('active')) {
+            closeModalHandler();
+        }
+    });
+});
+
+// ===========================
 // Console Message
 // ===========================
 
