@@ -2,7 +2,7 @@
 
 A clean, modern, single-page portfolio website showcasing data analytics and product analysis work. Designed for product analyst and strategy roles at venture-funded companies (fintech/SaaS).
 
-**Live Site:** [yourusername.github.io/portfolio-website](https://yourusername.github.io/portfolio-website) *(update after deployment)*
+**Live Site:** [twtloup.github.io/portfolio-website](https://twtloup.github.io/portfolio-website) *(update after deployment)*
 
 ---
 
@@ -97,7 +97,7 @@ git push -u origin main
    - Folder: `/ (root)`
 4. Click **Save**
 5. Wait 1-2 minutes for deployment
-6. Your site will be live at: `https://yourusername.github.io/portfolio-website/`
+6. Your site will be live at: `https://twtloup.github.io/portfolio-website/`
 
 ### Step 4: Verify Deployment
 
